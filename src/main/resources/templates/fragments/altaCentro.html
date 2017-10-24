@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<title></title>
+</head>
+<body>
+	<div th:fragment="paso1">
+		<div class="row">
+			<div class="col-md-12 col-xs-12">
+				<label>Datos del Centro</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-xs-3">
+				<input type="text" class="form-control" />
+			</div>
+			<div class="col-md-8 col-xs-8">
+				<input type="text" class="form-control" />
+			</div>
+		</div>
+		<br />
+		<div class="row">
+			<div class="col-md-3 col-xs-3">
+				<label>Id. Interna Persona</label>
+			</div>
+			<div class="col-md-3 col-xs-3">
+				<input type="text" class="form-control" />
+			</div>
+		</div>
+		<br />
+		<div class="row">
+			<div class="col-md-12 col-xs-12">
+				<label>Plaza bancaria:</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-xs-3">
+				<input type="text" class="form-control" />
+			</div>
+			<div class="col-md-8 col-xs-8">
+				<input type="text" class="form-control" />
+			</div>
+		</div>
+		<br />
+		<div class="row">
+			<div class="col-md-12 col-xs-12">
+				<label>Modalidad:</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-xs-3">
+				<input type="text" class="form-control" />
+			</div>
+			<div class="col-md-8 col-xs-8">
+				<input type="text" class="form-control" />
+			</div>
+		</div>
+		<br />
+		<div class="row">
+			<div class="col-md-8 col-xs-8">
+				<div class="row">
+					<div class="col-md-3 col-xs-3">
+						<label>Fecha Alta:</label>
+					</div>
+					<div class="col-md-3 col-xs-3">
+						<label>No. Días Backup:</label>
+					</div>
+					<div class="col-md-3 col-xs-3">
+						<label>No. Días Borrado:</label>
+					</div>
+					<div class="col-md-3 col-xs-3">
+						<label>Desg. Contable</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-3">
+						<input type="text" class="form-control" />
+					</div>
+					<div class="col-md-3 col-xs-3">
+						<input type="text" class="form-control" />
+					</div>
+					<div class="col-md-3 col-xs-3">
+						<input type="text" class="form-control" />
+					</div>
+					<div class="col-md-3 col-xs-3">
+						<input type="text" class="form-control" />
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-md-12 col-xs-12">
+						<input type="radio" value="OFICINA" class="" />
+						<label class="control-label" for="formato1">Centro controlador</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-xs-12">
+						<input type="radio" value="OFICINA" class="" /> <label
+							class="control-label" for="formato1">O. C. P.</label>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div th:fragment="paso2"></div>
+</body>
+</html>

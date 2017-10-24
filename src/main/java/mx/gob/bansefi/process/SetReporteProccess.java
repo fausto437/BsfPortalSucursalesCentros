@@ -20,8 +20,8 @@ import java.util.List;
  */
 @Service
 public class SetReporteProccess {
-    @Value("${url.context}")
-    private String urlcontext;
+    @Value("${url.LocalHost}")
+    private String urlLocalHost;
 
     private DecimalFormat df = new DecimalFormat("0.00");
     public WsServicios ArmarRequest( ) {

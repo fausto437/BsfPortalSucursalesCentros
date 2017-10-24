@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import mx.gob.bansefi.dto.Modelos.BsfOperador;
-import mx.gob.bansefi.dto.Request.Documentos.ReqEncryptORDecryptDTO;
+import mx.gob.bansefi.dto.Request.ReqEncryptORDecryptDTO;
 import mx.gob.bansefi.dto.Response.ResEncryptORDecryptDTO;
 import mx.gob.bansefi.utils.Util;
 
