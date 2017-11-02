@@ -6,105 +6,368 @@
 </head>
 <body>
 	<div th:fragment="paso1">
-		<div class="row">
-			<div class="col-md-12 col-xs-12">
-				<label>Datos del Centro</label>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-3 col-xs-3">
-				<input type="text" class="form-control" />
-			</div>
-			<div class="col-md-8 col-xs-8">
-				<input type="text" class="form-control" />
-			</div>
-		</div>
-		<br />
-		<div class="row">
-			<div class="col-md-3 col-xs-3">
-				<label>Id. Interna Persona</label>
-			</div>
-			<div class="col-md-3 col-xs-3">
-				<input type="text" class="form-control" />
-			</div>
-		</div>
-		<br />
-		<div class="row">
-			<div class="col-md-12 col-xs-12">
-				<label>Plaza bancaria:</label>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-3 col-xs-3">
-				<input type="text" class="form-control" />
-			</div>
-			<div class="col-md-8 col-xs-8">
-				<input type="text" class="form-control" />
-			</div>
-		</div>
-		<br />
-		<div class="row">
-			<div class="col-md-12 col-xs-12">
-				<label>Modalidad:</label>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-3 col-xs-3">
-				<input type="text" class="form-control" />
-			</div>
-			<div class="col-md-8 col-xs-8">
-				<input type="text" class="form-control" />
-			</div>
-		</div>
-		<br />
-		<div class="row">
-			<div class="col-md-8 col-xs-8">
-				<div class="row">
-					<div class="col-md-3 col-xs-3">
-						<label>Fecha Alta:</label>
-					</div>
-					<div class="col-md-3 col-xs-3">
-						<label>No. Días Backup:</label>
-					</div>
-					<div class="col-md-3 col-xs-3">
-						<label>No. Días Borrado:</label>
-					</div>
-					<div class="col-md-3 col-xs-3">
-						<label>Desg. Contable</label>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3 col-xs-3">
-						<input type="text" class="form-control" />
-					</div>
-					<div class="col-md-3 col-xs-3">
-						<input type="text" class="form-control" />
-					</div>
-					<div class="col-md-3 col-xs-3">
-						<input type="text" class="form-control" />
-					</div>
-					<div class="col-md-3 col-xs-3">
-						<input type="text" class="form-control" />
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-xs-3">
+	<div id="paso1" style="display:none;">
+		<label class="txt-campo-obligatorio margin-left-10">*Datos
+			Obligatorios</label>
+		<div class="margin-top-10"></div>
+		<div id="panelDatos">
+			<div id="datosCentro" class="container-fluid">
 				<div class="row">
 					<div class="col-md-12 col-xs-12">
-						<input type="radio" value="OFICINA" class="" />
-						<label class="control-label" for="formato1">Centro controlador</label>
+						<label>Centro: </label><span class="txt-campo-obligatorio">*</span>
 					</div>
 				</div>
 				<div class="row">
+					<div class="col-md-3 col-xs-3">
+						<input type="text" class="form-control" />
+					</div>
+					<div class="col-md-8 col-xs-8">
+						<input type="text" class="form-control" />
+					</div>
+				</div>
+				<br />
+				<div class="row">
+					<div class="col-md-3 col-xs-3">
+						<label>Id. Interna Persona</label>
+					</div>
+					<div class="col-md-3 col-xs-3">
+						<input type="text" class="form-control" />
+					</div>
+				</div>
+				<br />
+				<div class="row">
 					<div class="col-md-12 col-xs-12">
-						<input type="radio" value="OFICINA" class="" /> <label
-							class="control-label" for="formato1">O. C. P.</label>
+						<label>Plaza bancaria:</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-3">
+						<input type="text" class="form-control" />
+					</div>
+					<div class="col-md-8 col-xs-8">
+						<input type="text" class="form-control" />
+					</div>
+					<div class="col-md-1 col-xs-1">
+						<button type="button" class="btn btn-primary btn-circle btn-xs"
+							id="btnBusquedas" onclick="buscarPersona();">
+							<i class="fa fa-search fa-16" aria-hidden="true"></i><i
+								class="fa fa-bars" aria-hidden="true"></i>
+						</button>
+					</div>
+				</div>
+				<br />
+				<div class="row">
+					<div class="col-md-12 col-xs-12">
+						<label>Modalidad:</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-3">
+						<input type="text" class="form-control" />
+					</div>
+					<div class="col-md-8 col-xs-8">
+						<input type="text" class="form-control" />
+					</div>
+					<div class="col-md-1 col-xs-1">
+						<button type="button" class="btn btn-primary btn-circle btn-xs"
+							id="btnBusquedas" onclick="buscarPersona();">
+							<i class="fa fa-search fa-16" aria-hidden="true"></i><i
+								class="fa fa-bars" aria-hidden="true"></i>
+						</button>
+					</div>
+				</div>
+				<br />
+				<div class="row">
+					<div class="col-md-8 col-xs-8">
+						<div class="row">
+							<div class="col-md-3 col-xs-3">
+								<label>Fecha Alta:</label>
+							</div>
+							<div class="col-md-3 col-xs-3">
+								<label>No. Días Backup:</label>
+							</div>
+							<div class="col-md-3 col-xs-3">
+								<label>No. Días Borrado:</label>
+							</div>
+							<div class="col-md-3 col-xs-3">
+								<label>Desg. Contable</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 col-xs-3">
+								<input type="text" class="form-control" />
+							</div>
+							<div class="col-md-3 col-xs-3">
+								<input type="text" class="form-control" />
+							</div>
+							<div class="col-md-3 col-xs-3">
+								<input type="text" class="form-control" />
+							</div>
+							<div class="col-md-3 col-xs-3">
+								<input type="text" class="form-control" />
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-2 grupo-borde">
+						<div class="row">
+							<div class="col-md-12 col-xs-12">
+								<input type="radio" value="OFICINA" class="" /> <label
+									class="control-label" for="formato1">Centro controlador</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-xs-12">
+								<input type="radio" value="OFICINA" class="" /> <label
+									class="control-label" for="formato1">O. C. P.</label>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
 	</div>
-	<div th:fragment="paso2"></div>
+	</div>
+	<div th:fragment="paso2">
+		<div id="paso2" style="display:none;">
+			<div id="datosCentro" class="container-fluid">
+				<div class="row">
+					<div class="col-md-2 col-xs-2 col-md-offset-10 col-xs-offset-10">
+						<button class="btn btn-default btn-block">
+							<i class="fa fa-bars" aria-hidden="true"></i> Opciones
+						</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-xs-12">
+						<label>Tabla:</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-3">
+						<input class="form-control" type="text" readonly="readonly"/>
+					</div>
+					<div class="col-md-3 col-xs-3">
+						<input class="form-control" type="text" readonly="readonly"/>
+					</div>
+					<div class="col-md-6 col-xs-6">
+						<input class="form-control" type="text" readonly="readonly"/>
+					</div>
+				</div>
+				<br />
+				<div class="row">
+					<div class="col-md-3 col-xs-3">
+						<label>Clave Fila:</label>
+					</div>
+					<div class="col-md-9 col-xs-9">
+						<label>Des. Corta:</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-3">
+						<input class="form-control" type="text" />
+					</div>
+					<div class="col-md-9 col-xs-9">
+						<input class="form-control" type="text" />
+					</div>
+				</div>
+				<br />
+				<div class="row">
+					<div class="col-md-12 col-xs-12">
+						<label>Clave Fila:</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-xs-12">
+						<input class="form-control" type="text" />
+					</div>
+				</div>
+				<br />
+				<div class="row">
+					<div class="col-md-2 col-xs-2 col-md-offset-10 col-xs-offset-10">
+						<button class="btn btn-default btn-block">Buscar</button>
+					</div>
+				</div>
+				<div>
+					<hr class="divisor"/>
+				</div>
+				<div class="row">
+					<div class="col-md-10 col-xs-10">
+						<table class="table table-bordered">
+							<th>Clave Fila</th>
+							<th>Descripción</th>
+							<th>Descripción Larga</th>
+						</table>
+					</div>
+					<div class="col-md-2 col-xs-2">
+						<div class="form-horizontal">
+							<div class="form-group">
+								<label for="total" class="col-md-2 col-xs-2 control-label">Hay:
+								</label>
+								<div class="col-md-10 col-xs-10">
+									<input type="text" class="form-control" id="total" readonly="readonly"/>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-xs-12 text-center">
+								<button class="btn btn-default btn-block">Seleccionar</button>
+							</div>
+						</div>
+						<br />
+						<div class="row">
+							<div class="col-md-12 col-xs-12 text-center">
+								<button class="btn btn-default btn-block">Ver</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div th:fragment="paso3">
+		<div id="paso3" style="display:none;">
+			<div id="datosCentro" class="container-fluid">
+				<div class="row">
+					<div class="col-md-2 col-xs-2 col-md-offset-10 col-xs-offset-10">
+						<button class="btn btn-default btn-block">
+							<i class="fa fa-bars" aria-hidden="true"></i> Opciones
+						</button>
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<div class="col-md-10 col-xs-10">
+						<table class="table table-bordered">
+							<th>Localidad</th>
+							<th>Estado</th>
+							<th>Ciudad</th>
+							<th>Municipio</th>
+						</table>
+					</div>
+					<div class="col-md-2 col-xs-2">
+						<div class="form-horizontal">
+							<div class="form-group">
+								<label for="total" class="col-md-6 col-xs-6 control-label">M&aacute;s de:
+								</label>
+								<div class="col-md-6 col-xs-6">
+									<input type="text" class="form-control" id="total" readonly="readonly"/>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-xs-4 pull-right">
+								<button class="btn btn-default btn-block">+</button>
+							</div>
+						</div>
+						<br />
+						<div class="row">
+							<div class="col-md-12 col-xs-12 text-center">
+								<button class="btn btn-default btn-block">Seleccionar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div th:fragment="paso4">
+		<div  id="paso4">
+			<div id="datosCentro" class="container-fluid">
+				<div class="row">
+					<label class="col-md-12">Tipo de Domicilio</label>
+				</div>
+				<br/>
+				<div class="row">
+					<div class="col-md-2 col-xs-2">
+						<label>
+							<input type="checkbox"/> Habitual
+						</label>
+					</div>
+					<div class="col-md-2 col-xs-2">
+						<label>
+							<input type="checkbox"/> Fiscal
+						</label>
+					</div>
+					<div class="col-md-2 col-xs-2">
+						<label>
+							<input type="checkbox"/> Social
+						</label>
+					</div>
+					<div class="col-md-2 col-xs-2">
+						<label>
+							<input type="checkbox"/> Postal
+						</label>
+					</div>
+					<div class="col-md-2 col-xs-2">
+						<label>
+							<input type="checkbox"/> Bien
+						</label>
+					</div>
+					<div class="col-md-2 col-xs-2">
+						<label>
+							<input type="checkbox"/> Temporal
+						</label>
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<div class="col-md-2 col-xs-2">
+						<label>Teléfono</label>
+					</div>
+					<div class="col-md-4 col-xs-4">
+							<input type="text" class="form-control"/>
+					</div>
+					<div class="col-md-2 col-xs-2">
+						<label>R&eacute;gimen de Ocupaci&oacute;n</label>
+					</div>
+					<div class="col-md-4 col-xs-4">
+						<input type="text" class="form-control hidden"/>
+						<input type="text" class="form-control hidden"/>
+						<select class="form-control"></select>
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<div class="col-md-2 col-xs-2">
+						<label>Tipo de Calle</label>
+					</div>
+					<div class="col-md-1 col-xs-1">
+						<input type="text" class="form-control"/>
+					</div>
+					<div class="col-md-3 col-xs-3">
+						<input type="text" class="form-control hidden"/>
+						<input type="text" class="form-control hidden"/>
+						<select class="form-control"></select>
+					</div>
+					<div class="col-md-3 col-xs-3">
+						<div class="col-md-6 col-md-6">
+							<label>Num Exterior</label>
+						</div>
+						<div class="col-md-6 col-md-6">
+							<input type="text" class="form-control"/>
+						</div>
+					</div>
+					<div class="col-md-3 col-xs-3">
+						<div class="col-md-6 col-md-6">
+							<label>Num Interior</label>
+						</div>
+						<div class="col-md-6 col-md-6">
+							<input type="text" class="form-control"/>
+						</div>
+					</div>
+					
+				</div>
+				<br/>
+				<div class="row">
+					<div class="col-md-2 col-xs-2">
+						<label>Calle</label>
+					</div>
+					<div class="col-md-4 col-xs-4">
+						<input type="text" class="form-control"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
