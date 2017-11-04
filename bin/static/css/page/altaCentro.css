@@ -5,3 +5,9 @@
 .divisor{
 	box-shadow: 0 1px 1px 0px #333;
 }
+.btn-default{
+ 	background-color:#EBEBEB;
+ 	color:#ACB0B4;
+ 	padding-top:10px;
+ 	padding-bottom:10px;
+}

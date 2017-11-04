@@ -43,3 +43,17 @@ function msjAlerta(text) {
 		}
   });
 }
+
+//Funcion para mostrar los formularios busqueda.
+//PARAMETROS buscar Contiene especificado que pantalla se estará mostrando.
+function mostrarBusqueda(buscar){
+	switch(buscar){
+		case 'pb':{
+			$("#paso1").addClass('hidden');
+			$("#paso2").removeClass('hidden');
+		}break;
+		case 'mo':{
+			
+		}break;
+	}
+}

@@ -18,8 +18,8 @@
 <script th:src="@{/js/bootstrap-select.js}"></script>
 <script th:src="@{/js/jquery.inputmask.bundle.js}"></script>
 <script th:src="@{/js/jquery.mask.js}"></script>
-<script th:src="@{/js/Validaciones.js}"></script>
-<script th:src="@{/js/funcionesGenerales.js}"></script>
+<script th:src="@{/js/page/Validaciones.js}"></script>
+<script th:src="@{/js/page/altaCentro.js}"></script>
 <title>Alta de centros</title>
 </head>
 <body>
@@ -41,29 +41,20 @@
 						<h1>Alta de centro</h1>
 					</div>
 					<!--agregar-campos-->
-					<div class="contenedor-campos">
-						<th:block id="paso1" name="paso1"
-							th:include="fragments/altaCentro :: paso1"></th:block>
-						<th:block id="paso2" name="paso2"
-							th:include="fragments/altaCentro :: paso2"></th:block>
-						<th:block id="paso3" name="paso3"
-							th:include="fragments/altaCentro :: paso3"></th:block>
-						<th:block id="paso4" name="paso4"
-							th:include="fragments/altaCentro :: paso4"></th:block>
-					</div>
+					<th:block id="paso1" name="paso1"
+						th:include="fragments/altaCentro :: paso1"></th:block>
+					<th:block id="paso2" name="paso2"
+						th:include="fragments/altaCentro :: paso2"></th:block>
+					<th:block id="paso3" name="paso3"
+						th:include="fragments/altaCentro :: paso3"></th:block>
+					<th:block id="paso4" name="paso4"
+						th:include="fragments/altaCentro :: paso4"></th:block>
 					<!--termina contenedor-campos-->
-					<div class="margin-top-10"></div>
-					<button class="btn btn-default"
-						action="#{altaCentroController.validarCancelar()}">
-						Cancelar</button>
-					<button class="btn btn-default pull-right" style="display:none;">Siguiente</button>
-					<button class="btn btn-default pull-right">Imprimir</button>
 				</form>
 
 			</div>
 			<!--termina contenedor-form-->
 		</div>
-		<!--termina contenedor-->
 	</div>
 </body>
 </html>
