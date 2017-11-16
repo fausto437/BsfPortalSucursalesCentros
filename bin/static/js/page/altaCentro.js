@@ -50,10 +50,17 @@ function mostrarBusqueda(buscar){
 	switch(buscar){
 		case 'pb':{
 			$("#paso1").addClass('hidden');
-			$("#paso2").removeClass('hidden');
+			$("#plazaBancaria").removeClass('hidden');
 		}break;
 		case 'mo':{
-			
+			$("#paso1").addClass('hidden');
+			$("#modalidad").removeClass('hidden');
 		}break;
 	}
+}
+
+//Funcion para continuar con el formulario para dar de alta.
+function siguientePaso(){
+	$("#paso1").addClass('hidden');
+	$("#paso2").removeClass('hidden');
 }

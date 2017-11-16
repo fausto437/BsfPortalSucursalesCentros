@@ -114,14 +114,14 @@
 							<div class="col-md-2 col-xs-2 grupo-borde">
 								<div class="row">
 									<div class="col-md-12 col-xs-12">
-										<input type="radio" value="OFICINA" class="" /> <label
+										<input type="radio" value="CONTROLADOR" class="" /> <label
 											class="control-label" for="formato1">Centro
 											controlador</label>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-md-12 col-xs-12">
-										<input type="radio" value="OFICINA" class="" /> <label
+										<input type="radio" value="OCP" class="" /> <label
 											class="control-label" for="formato1">O. C. P.</label>
 									</div>
 								</div>
@@ -131,14 +131,18 @@
 				</div>
 			</div>
 			<div class="margin-top-10"></div>
-			<button class="btn btn-default" style=""
-				action="#{altaCentroController.validarCancelar()}">Salir</button>
-
-			<button class="btn btn-default pull-right" style="">Siguiente</button>
+			<div class="row">
+				<div class="col-md-2 col-xs-2">
+					<button class="btn btn-default btn-block" type="button">Salir</button>
+				</div>
+				<div class="col-md-2 col-xs-2 col-md-offset-8 col-xs-offset-8">
+					<button class="btn btn-default pull-right btn-block" type="button" onclick="siguientePaso();">Siguiente</button>
+				</div>
+			</div>			
 		</div>
 	</div>
-	<div th:fragment="paso2">
-		<div id="paso2" class="hidden">
+	<div th:fragment="plazaBancaria">
+		<div id="plazaBancaria" class="hidden">
 			<div class="contenedor-campos">
 				<div id="datosCentro" class="container-fluid">
 					<div class="row">
@@ -245,14 +249,12 @@
 					<button class="btn btn-default btn-block pull-right">Imprimir</button>
 				</div>
 			</div>
-			
-			
 		</div>
 		<div class="margin-top-10"></div>
 	</div>
-	<div th:fragment="paso3">
-		<div id="paso3">
-			<div class="contenedor-campos hidden">
+	<div th:fragment="modalidad">
+		<div id="modalidad" class="hidden">
+			<div class="contenedor-campos">
 				<div id="datosCentro" class="container-fluid">
 					<div class="row">
 						<div class="col-md-2 col-xs-2 col-md-offset-10 col-xs-offset-10">
@@ -297,11 +299,20 @@
 					</div>
 				</div>
 			</div>
+			<div class="margin-top-10"></div>
+			<div class="row">
+				<div class="col-md-2 col-xs-2">
+					<button class="btn btn-default btn-block" action="#{altaCentroController.validarCancelar()}">Salir</button>
+				</div>
+				<div class="col-md-2 col-xs-2 col-md-offset-8 col-xs-offset-8">
+					<button class="btn btn-default btn-block pull-right">Imprimir</button>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div th:fragment="paso4">
-		<div class="hidden">
-			<div id="paso4" style="display: none;" class="contenedor-campos">
+	<div th:fragment="paso2">
+		<div id="paso2" class="hidden">
+			<div class="contenedor-campos">
 				<div id="datosCentro" class="container-fluid">
 					<div class="row">
 						<label class="col-md-12">Tipo de Domicilio: </label>
@@ -424,7 +435,7 @@
 						<div class="col-md-3 col-xs-3">
 							<div class="row">
 								<div class="col-md-6 col-md-6">
-									<label>Piso: </label>
+									<label>Entrada: </label>
 								</div>
 								<div class="col-md-6 col-md-6">
 									<input type="text" class="form-control" />
@@ -434,7 +445,7 @@
 						<div class="col-md-3 col-xs-3">
 							<div class="row">
 								<div class="col-md-6 col-md-6">
-									<label>Casa: </label>
+									<label>Bloque: </label>
 								</div>
 								<div class="col-md-6 col-md-6">
 									<input type="text" class="form-control" />

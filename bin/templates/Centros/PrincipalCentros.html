@@ -41,14 +41,10 @@
 						<h1>Alta de centro</h1>
 					</div>
 					<!--agregar-campos-->
-					<th:block id="paso1" name="paso1"
-						th:include="fragments/altaCentro :: paso1"></th:block>
-					<th:block id="paso2" name="paso2"
-						th:include="fragments/altaCentro :: paso2"></th:block>
-					<th:block id="paso3" name="paso3"
-						th:include="fragments/altaCentro :: paso3"></th:block>
-					<th:block id="paso4" name="paso4"
-						th:include="fragments/altaCentro :: paso4"></th:block>
+					<th:block th:include="fragments/altaCentro :: paso1"></th:block>
+					<th:block th:include="fragments/altaCentro :: plazaBancaria"></th:block>
+					<th:block th:include="fragments/altaCentro :: modalidad"></th:block>
+					<th:block th:include="fragments/altaCentro :: paso2"></th:block>
 					<!--termina contenedor-campos-->
 				</form>
 

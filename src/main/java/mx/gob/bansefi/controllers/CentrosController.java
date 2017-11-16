@@ -35,7 +35,7 @@ public class CentrosController {
     
     @RequestMapping("/prueba")
     public ModelAndView pruaba() {
-        return new ModelAndView(packageTemplates + "/Test");
+        return new ModelAndView(packageTemplates + "/altaCentro.xhtml");
     }
 
     //MAPPING PRINCIPAL DEL BSFOPERADOR
